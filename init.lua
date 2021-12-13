@@ -23,7 +23,7 @@ digiline_nodes = {}
 local _dn = digiline_nodes
 function _dn.register_digiline_node(mod,node)
   local nodename = mod .. ":" .. node
-  local digi_nodename = MN .. ":" .. mod .. "__" .. node
+  local digi_nodename = ":" .. MN .. ":" .. mod .. "__" .. node
   local ndef = minetest.registered_nodes[nodename]
   if not(ndef) then
     minetest.log("warning","Not registering `" .. nodename ..
